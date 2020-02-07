@@ -25,8 +25,16 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         init();
-//        adapters();
         callApi();
+
+    }
+
+    private void init() {
+        //recyleview
+        recyclerView=findViewById(R.id.recyleview);
+        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(MainActivity.this);
+        recyclerView.setLayoutManager(layoutManager);
+        recyclerView.setHasFixedSize(true);
     }
 
     private void callApi() {
@@ -54,13 +62,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    private void init() {
-        //recyleview
-        recyclerView=findViewById(R.id.recyleview);
-        RecyclerView.LayoutManager layoutManager=new LinearLayoutManager(MainActivity.this);
-        recyclerView.setLayoutManager(layoutManager);
-        recyclerView.setHasFixedSize(true);
-//        ModelAdapter modelAdapter=new ModelAdapter((Callback<ArrayList<Model_item>>) this,arrayList);
-//        recyclerView.setAdapter(modelAdapter);
-    }
 }
