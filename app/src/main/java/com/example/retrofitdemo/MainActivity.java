@@ -50,7 +50,6 @@ public class MainActivity extends AppCompatActivity {
                 ModelAdapter modelAdapter=new ModelAdapter(MainActivity.this,arrayList);
                 recyclerView.setAdapter(modelAdapter);
                 Toast.makeText(MainActivity.this, "Sucessful", Toast.LENGTH_SHORT).show();
-
             }
 
             @Override
